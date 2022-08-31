@@ -65,6 +65,9 @@ export const products = [
       { support: "free delivery" },
       { support: "Original" },
     ],
+    spec : [
+      {system : {title : "A-15 bionic" , sub : "5G-cores"}},
+    ],
     price: 1200,
     offPrice: 0,
     discount: 0,
