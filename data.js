@@ -66,7 +66,9 @@ export const products = [
       { support: "Original" },
     ],
     spec : [
-      {system : {title : "A-15 bionic" , sub : "5G-cores"}},
+      {system : {title : "Ios 15" , sub : "5G support" , cat : "os"}},
+      {system : {title : "A15 Bionic Chip" , sub : "5G-cores" , cat : "chipSet"}},
+      {system : {title : "Up to 28 hours video" , sub : "playback2" , cat : "battery"}},
     ],
     price: 1200,
     offPrice: 0,
