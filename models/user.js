@@ -7,7 +7,7 @@ const userSchema = mongoose.Schema(
     phoneNumber: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     isAdmin: { type: Boolean, default: false, required: true },
-    resetLink: { data: String, default: "" },
+    resetLink: { data: String },
   },
   {
     timestamps: true,

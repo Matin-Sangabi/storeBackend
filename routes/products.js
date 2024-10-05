@@ -13,6 +13,7 @@ router.get(
       const products = await Products.find();
       res.json(products);
     } catch (error) {
+      console.log(error);
       res.status(400).json({ message: "product get error !! " });
     }
   })
@@ -23,9 +24,13 @@ router.get(
   // isAuth,
   // isAdmin,
   asyncHandler(async (req, res) => {
-    console.log(data.products);
-    const createdProducts = await Products.insertMany(data.products);
-    res.send({ createdProducts });
+    try {
+      const products = data.products;
+      const createdProducts = await Products.insertMany(data.products);
+      res.send({ message: createdProducts });
+    } catch (error) {
+      console.log(error)
+    }
   })
 );
 
@@ -39,4 +44,3 @@ router.get("/:id", async (req, res) => {
 });
 
 export default router;
-

@@ -22,7 +22,7 @@
     "joi": "^17.4.0",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.6.5",
-    "mongoose": "^5.12.3",
+    "mongoose": "^8.7.0",
     "node": "^16.17.0"
   },
   "repository": {

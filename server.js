@@ -14,10 +14,7 @@ app.use(express.urlencoded({ extended: true })); // parses application/x-www-for
 
 // Connect to DB
 mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("MongoDB connected!!");
   })
