@@ -1,9 +1,9 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import userRouter from "./routes/user.js";
-import productRouter from "./routes/products.js";
-import orderRouter from "./routes/order.js";
+import userRouter from "../routes/user.js";
+import productRouter from "../routes/products.js";
+import orderRouter from "../routes/order.js";
 import cors from "cors";
 dotenv.config();
 
@@ -24,7 +24,7 @@ mongoose
 
 // // Router middleware :
 app.use(cors());
-
+app.get("/", (req, res) => res.send("Express on Vercel"));
 app.use("/api/user", userRouter);
 app.use("/api/product", productRouter);
 app.use("/api/order", orderRouter);
